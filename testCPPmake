@@ -1,0 +1,6 @@
+testCPP: testCPP.o
+	g++ $(CFLAGS) -o testCPP testCPP.o -lpthread
+testCPP.o: testCPP.cpp
+	g++ $(CFLAGS) -std=c++0x -c testCPP.cpp
+clean:
+	rm -f testCPP.o testCPP
